@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const rand = () => {
+            const array = []
+            for (let i = 0; i < 6; i++) {
+                const random = Math.floor(Math.random() * (38 - 1 + 1) + 1)
+                if (!array.includes(random)) {
+                    array.push(random)
+                } else {
+                    i--
+                }
+            }
+            return array
+        }
+        document.write(rand() + '<br>')
+
+
+        const rand1 = () => {
+            return Math.floor(Math.random() * (8 - 1 + 1) + 1)
+        }
+        document.write(rand1())
+    </script>
+</body>
+
+</html>
